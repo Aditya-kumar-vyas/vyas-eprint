@@ -27,8 +27,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 rounded-lg border border-gray-100 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">Printout Services</h3>
-              <p className="text-gray-600">High-quality printout solutions for all your needs</p>
+              <h3 className="text-xl font-semibold mb-4">Printing Services</h3>
+              <p className="text-gray-600">High-quality printing solutions for all your needs</p>
             </div>
             <div className="p-6 rounded-lg border border-gray-100 shadow-sm">
               <h3 className="text-xl font-semibold mb-4">Digital Services</h3>
