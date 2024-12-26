@@ -1,3 +1,4 @@
+
 'use client'
 import { Mail, Phone, Clock, MapPin } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -21,10 +22,10 @@ export default function Home() {
       `}</style>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-blue-50 to-white py-16">
+        <section className="bg-gradient-to-b from-blue-50 to-white py-8 sm:py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 mb-6">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-6">
                 <img 
                   src="https://lh3.googleusercontent.com/-e20-NCq5B7A/AAAAAAAAAAI/AAAAAAAAAAA/D1ny7hqULG0/s60-c-k-mo/photo.jpg" 
                   alt="Vyas eprint logo" 
@@ -32,91 +33,91 @@ export default function Home() {
                   aria-label="Rotating Vyas eprint logo"
                 />
               </div>
-              <h1 className="text-4xl font-bold mb-4">Vyas eprint</h1>
-              <p className="text-gray-600 max-w-2xl">Your one-stop solution for printout and digital services in Jodhpur</p>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Vyas eprint</h1>
+              <p className="text-gray-600 max-w-xl text-sm sm:text-base">Your one-stop solution for printout, photocopy and digital services in Jodhpur</p>
             </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="py-16 bg-white">
+        <section className="py-8 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="p-6 rounded-lg border border-gray-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">Printout Services</h3>
-                <p className="text-gray-600">High-quality printout solutions for all your needs</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Our Services</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Printout Services</h3>
+                <p className="text-gray-600 text-sm sm:text-base">High-quality printout solutions for all your needs</p>
               </div>
-              <div className="p-6 rounded-lg border border-gray-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">Digital Services</h3>
-                <p className="text-gray-600">Modern digital solutions and file transfers</p>
+              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital Services</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Modern digital solutions and file transfers</p>
               </div>
-              <div className="p-6 rounded-lg border border-gray-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">Stationery</h3>
-                <p className="text-gray-600">Wide range of stationery items available</p>
+              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Stationery</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Wide range of stationery items available</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-8 sm:py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
-            <div className="max-w-2xl mx-auto space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                <p className="text-gray-600">21E/348, Chopasni Housing Board, Pal Road, Chopasni Housing Board, Jodhpur - 342008 (Near Udhyan Apartment)</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Contact Us</h2>
+            <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <p className="text-gray-600 text-sm sm:text-base">21E/348, Chopasni Housing Board, Pal Road, Chopasni Housing Board, Jodhpur - 342008 (Near Udhyan Apartment)</p>
               </div>
-              <div className="flex items-center gap-4">
-                <Phone className="w-6 h-6 text-blue-600" />
-                <p className="text-gray-600">7976711615</p>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                <p className="text-gray-600 text-sm sm:text-base">7976711615</p>
               </div>
-              <div className="flex items-center gap-4">
-                <Mail className="w-6 h-6 text-blue-600" />
-                <p className="text-gray-600">vyaseprints@gmail.com</p>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                <p className="text-gray-600 text-sm sm:text-base">vyaseprints@gmail.com</p>
               </div>
-              <div className="flex items-center gap-4">
-                <Clock className="w-6 h-6 text-blue-600" />
-                <p className="text-gray-600">8:00 AM - 8:00 PM (All days)</p>
+              <div className="flex items-center gap-3 sm:gap-4">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                <p className="text-gray-600 text-sm sm:text-base">8:00 AM - 8:00 PM (All days)</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-white">
+        <section className="py-8 sm:py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Frequently Asked Questions</h2>
             <div className="max-w-2xl mx-auto">
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Does Vyas eprint provide printing services?</AccordionTrigger>
-                  <AccordionContent>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border rounded-lg">
+                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Does Vyas eprint provide printing services?</AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
                     Yes, we provide comprehensive printing services. Contact us for more details about specific printing requirements.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>What are your operational hours?</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="item-2" className="border rounded-lg">
+                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">What are your operational hours?</AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
                     We are open all days of the week from 8:00 AM to 8:00 PM.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-3">
-                  <AccordionTrigger>Can I digitally transfer files for printing?</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="item-3" className="border rounded-lg">
+                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Can I digitally transfer files for printing?</AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
                     Yes, you can easily transfer your files through email for printing.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-4">
-                  <AccordionTrigger>Do you sell stationery items?</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="item-4" className="border rounded-lg">
+                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Do you sell stationery items?</AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
                     Yes, we offer a wide range of stationery items including pens, pencils, erasers, whiteners, files, notebooks, and more.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-5">
-                  <AccordionTrigger>Do you accept bulk orders for printing?</AccordionTrigger>
-                  <AccordionContent>
+                <AccordionItem value="item-5" className="border rounded-lg">
+                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Do you accept bulk orders for printing?</AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
                     Yes, we handle bulk printing orders. Please contact us directly for more details about bulk printing services.
                   </AccordionContent>
                 </AccordionItem>
