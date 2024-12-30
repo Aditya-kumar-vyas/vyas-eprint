@@ -34,7 +34,7 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Vyas eprint</h1>
-              <p className="text-gray-600 max-w-xl text-sm sm:text-base">Your one-stop solution for printout, photocopy and digital services in Jodhpur</p>
+              <p className="text-gray-600 max-w-xl text-sm sm:text-base">Your one-stop solution for B/W and color printout in size A4, A5 and A3, photocopy and digital services in Jodhpur</p>
             </div>
           </div>
         </section>
@@ -49,7 +49,7 @@ export default function Home() {
                 <p className="text-gray-600 text-sm sm:text-base">High-quality printout solutions for all your needs</p>
               </div>
               <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital Services</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital E-Services</h3>
                 <p className="text-gray-600 text-sm sm:text-base">Modern digital solutions and file transfers</p>
               </div>
               <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
