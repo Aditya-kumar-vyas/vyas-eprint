@@ -49,12 +49,9 @@ export default function Home() {
               </div>
               <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital E-Services</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Modern digital e-services for visiting card(pdf, jpg/png) , pamphalet, Resume/CV, Catalog, Brochure and Social-Media posture</p>
+                <p className="text-gray-600 text-sm sm:text-base">Modern digital e-services for visiting card(pdf, jpg/png) , Pamphlet, Resume/CV, Catalogue, Brochure and Social-Media posture</p>
               </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Stationery</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Wide range of stationery items available</p>
-              </div>
+              
               <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">E-Astro Services</h3>
                 <p className="text-gray-600 text-sm sm:text-base">Digital E-horoscope and E-varshfal 2025</p>
@@ -86,13 +83,8 @@ export default function Home() {
                     Yes, you can easily transfer your files through email for printout.
                   </AccordionContent>
                 </AccordionItem>
+               
                 <AccordionItem value="item-4" className="border rounded-lg">
-                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Do you sell stationery items?</AccordionTrigger>
-                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
-                    Yes, we offer a wide range of stationery items including pens, pencils, erasers, whiteners, files, notebooks, and more.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-5" className="border rounded-lg">
                   <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Do you accept bulk orders for printout?</AccordionTrigger>
                   <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
                     Yes, we handle bulk printing orders. Please contact us directly for more details about bulk printout services.
@@ -110,7 +102,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
               <div className="flex items-start gap-3 sm:gap-4">
                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-1" />
-                <p className="text-gray-600 text-sm sm:text-base">21E/348, Chopasni Housing Board, Pal Road, Chopasni Housing Board, Jodhpur - 342008 (Near Udhyan Apartment)</p>
+                <p className="text-gray-600 text-sm sm:text-base">21E/348, Chopasni Housing Board, Pal Road, Jodhpur - 342008 (Near Udhyan Apartment)</p>
               </div>
               <div className="flex items-center gap-3 sm:gap-4">
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
