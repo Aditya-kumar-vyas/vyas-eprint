@@ -21,7 +21,7 @@ export default function Home() {
       `}</style>
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-blue-50 to-white py-8 sm:py-16">
+        <section className="bg-lime-200">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-6">
@@ -39,28 +39,28 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className=" bg-white">
+        <section className="bg-lime-200">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
+              <div className="p-4 sm:p-6 rounded-md border border-black shadow-sm">
                 <h3 className="text-lg   sm:text-xl font-semibold mb-2 sm:mb-4">Printout Services</h3>
                 <p className="text-gray-600 text-sm sm:text-base">High-quality printout in size of A4,A5 and A3 for all your needs</p>
               </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
+              <div className="p-4 sm:p-6 rounded-lg border border-black shadow-sm">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital E-Services</h3>
                 <p className="text-gray-600 text-sm sm:text-base">Modern digital e-services for visiting card(pdf, jpg/png) , Pamphlet, Resume/CV, Catalogue, Brochure and Social-Media posture</p>
               </div>
               
-              <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
+              {/* <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">E-Astro Services</h3>
                 <p className="text-gray-600 text-sm sm:text-base">Digital E-horoscope and E-varshfal 2025</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
          {/* FAQ Section */}
-         <section className="py-8 sm:py-16 bg-white">
+         <section className="py-8 sm:py-16 bg-lime-200">
         <div className="container mx-auto px-4">
             <h2 className="text-2xl   sm:text-3xl font-bold text-center mb-8 sm:mb-12">Frequently Asked Questions</h2>
             <div className="max-w-2xl mx-auto">
@@ -96,7 +96,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-8 sm:py-16 bg-gray-50">
+        <section className="py-8 sm:py-16 bg-lime-200">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl text-blue-400 sm:text-3xl font-bold text-center mb-8 sm:mb-12">Contact Us</h2>
             <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
