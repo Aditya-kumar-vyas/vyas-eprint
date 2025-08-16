@@ -1,128 +1,94 @@
 'use client'
-import { Mail, Phone, Clock, MapPin } from 'lucide-react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import {motion} from 'framer-motion'
+import { ShoppingCart, PenTool, BookOpen, Printer } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
-    <>
-      <style jsx global>{`
-        @keyframes rotate360 {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
+     <div className="min-h-screen bg-gradient-to-br from-pink-100 via-yellow-100 to-blue-100 flex flex-col items-center">
+      {/* Header */}
+       <header className="w-full py-4 shadow-lg bg-white flex justify-between items-center px-6 sm:px-12 rounded-b-2xl">
+        <div className="flex items-center gap-4">
+          <motion.img
+            src="https://lh3.googleusercontent.com/-e20-NCq5B7A/AAAAAAAAAAI/AAAAAAAAAAA/D1ny7hqULG0/s60-c-k-mo/photo.jpg"
+            alt="Vyas eprint logo"
+            aria-label="Rotating Vyas eprint logo"
+            className="w-12 h-12 sm:w-20 sm:h-20 rounded-full border-2 border-pink-500"
+            animate={{ rotate: [0, 360] }}
+            transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+          />
+          <h1 className="text-xl sm:text-3xl font-extrabold text-pink-600 tracking-wide">
+            Vyas Eprint ✨
+          </h1>
+        </div>
 
-        .rotate-animation {
-          animation: rotate360 10s linear infinite;
-        }
-      `}</style>
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="bg-lime-200">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 mb-4 sm:mb-6">
-                <img 
-                  src="https://lh3.googleusercontent.com/-e20-NCq5B7A/AAAAAAAAAAI/AAAAAAAAAAA/D1ny7hqULG0/s60-c-k-mo/photo.jpg" 
-                  alt="Vyas eprint logo" 
-                  className="w-full h-full object-contain rotate-animation"
-                  aria-label="Rotating Vyas eprint logo"
-                />
-              </div>
-              <h1 className="text-3xl text-blue-600 sm:text-4xl font-bold mb-2 sm:mb-4">Vyas eprint</h1>
-              <p className="text-gray-600 max-w-xl text-sm sm:text-base">Your one-stop solution for B/W and color printout ,  photocopy and digital services in Jodhpur</p>
-            </div>
+      
+      </header>
+      {/* Hero Section */}
+      <motion.section
+        className="flex flex-col md:flex-row items-center justify-between w-11/12 mt-12 bg-white rounded-2xl shadow-xl p-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="md:w-1/2 space-y-6">
+          <h2 className="text-5xl font-extrabold text-pink-600 leading-tight">
+            Your Friendly <span className="text-yellow-500">Printing</span> &
+            <span className="text-blue-500"> Stationery </span> Shop 🎨
+          </h2>
+          <p className="text-lg text-gray-600">
+            Explore colorful pens, notebooks, and hassle-free printing services. 
+            Let’s make your work and studies more fun & exciting!
+          </p>
+          <div className="flex gap-4">
+            {/* <Button className="bg-yellow-400 hover:bg-yellow-500 text-white rounded-xl px-6 py-3">
+              Shop Now 🛍️
+            </Button>
+            <Button className="bg-blue-400 hover:bg-blue-500 text-white rounded-xl px-6 py-3">
+              Services 📑
+            </Button> */}
           </div>
-        </section>
+        </div>
 
-        {/* Services Section */}
-        <section className="bg-lime-200">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
-              <div className="p-4 sm:p-6 rounded-md border border-black shadow-sm">
-                <h3 className="text-lg   sm:text-xl font-semibold mb-2 sm:mb-4">Printout Services</h3>
-                <p className="text-gray-600 text-sm sm:text-base">High-quality printout in size of A4,A5 and A3 for all your needs</p>
-              </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-black shadow-sm">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Digital E-Services</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Modern digital e-services for visiting card(pdf, jpg/png) , Pamphlet, Resume/CV, Catalogue, Brochure and Social-Media posture</p>
-              </div>
-              
-              {/* <div className="p-4 sm:p-6 rounded-lg border border-gray-100 shadow-sm">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">E-Astro Services</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Digital E-horoscope and E-varshfal 2025</p>
-              </div> */}
-            </div>
-          </div>
-        </section>
-         {/* FAQ Section */}
-         <section className="py-8 sm:py-16 bg-lime-200">
-        <div className="container mx-auto px-4">
-            <h2 className="text-2xl   sm:text-3xl font-bold text-center mb-8 sm:mb-12">Frequently Asked Questions</h2>
-            <div className="max-w-2xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="item-1" className="border rounded-lg">
-                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Does Vyas eprint provide printout services?</AccordionTrigger>
-                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
-                    Yes, we provide comprehensive printing services. Contact us for more details about specific printout requirements.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2" className="border rounded-lg">
-                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">What are your operational hours?</AccordionTrigger>
-                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
-                    We are open all days of the week from 8:00 AM to 7:30 PM.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3" className="border rounded-lg">
-                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Can I digitally transfer files for printout?</AccordionTrigger>
-                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
-                    Yes, you can easily transfer your files through email for printout.
-                  </AccordionContent>
-                </AccordionItem>
-               
-                <AccordionItem value="item-4" className="border rounded-lg">
-                  <AccordionTrigger className="px-4 py-3 text-sm sm:text-base">Do you accept bulk orders for printout?</AccordionTrigger>
-                  <AccordionContent className="px-4 pb-3 text-sm sm:text-base">
-                    Yes, we handle bulk printing orders. Please contact us directly for more details about bulk printout services.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          </div>
-        </section>
+        <motion.img
+          src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png"
+          alt="Stationery illustration"
+          className="w-80 h-80"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        />
+      </motion.section>
 
-        {/* Contact Section */}
-        <section className="py-8 sm:py-16 bg-lime-200">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl text-blue-400 sm:text-3xl font-bold text-center mb-8 sm:mb-12">Contact Us</h2>
-            <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 mt-1" />
-                <p className="text-gray-600 text-sm sm:text-base">21E/348, Chopasni Housing Board, Pal Road, Jodhpur - 342008 (Near Udhyan Apartment)</p>
-              </div>
-              <div className="flex items-center gap-3 sm:gap-4">
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-                <p className="text-gray-600 text-sm sm:text-base">7976711615</p>
-              </div>
-              <div className="flex items-center gap-3 sm:gap-4">
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-                <p className="text-gray-600 text-sm sm:text-base">vyaseprints@gmail.com</p>
-              </div>
-              <div className="flex items-center gap-3 sm:gap-4">
-                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-                <p className="text-gray-600 text-sm sm:text-base">8:00 AM - 8:00 PM (All days)</p>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Categories */}
+      <section className="w-11/12 mt-16">
+        <h3 className="text-3xl font-bold text-center text-pink-600 mb-10">
+          Explore Our Categories 📚
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { icon: PenTool, label: "Pens & Pencils", color: "bg-pink-100" },
+            { icon: BookOpen, label: "Notebooks", color: "bg-yellow-100" },
+            { icon: Printer, label: "Printing Services", color: "bg-blue-100" },
+            { icon: ShoppingCart, label: "Supplies", color: "bg-green-100" },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              className={`${item.color} p-6 rounded-2xl shadow-md flex flex-col items-center hover:scale-105 transition-transform cursor-pointer`}
+              whileHover={{ y: -5 }}
+            >
+              <item.icon className="w-12 h-12 text-pink-600 mb-4" />
+              <p className="font-semibold text-lg">{item.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-       
-      </main>
-    </>
+      {/* Footer */}
+      <footer className="w-full mt-20 py-6 bg-pink-600 text-white text-center rounded-t-2xl">
+        <p>© 2025 Vyas Eprint | Making stationery fun again ✨</p>
+      </footer>
+    </div>
   )
 }
 
