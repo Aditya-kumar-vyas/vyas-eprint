@@ -66,61 +66,144 @@ export default function Home() {
         }
 
         .navbar {
-          min-height: 78px;
+          min-height: 76px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 20px;
+          gap: 12px;
         }
 
-        .logo {
-          font-size: 25px;
+        /* Colourful & Stylized Left Logo */
+        .logo-container {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          text-decoration: none;
+        }
+
+        .logo-main {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 24px;
           font-weight: 900;
-          color: var(--blue);
-          line-height: 1.05;
+          letter-spacing: -0.5px;
+          line-height: 1;
         }
 
-        .logo span {
-          color: #ed2b35;
-        }
-
-        .logo small {
-          display: block;
-          text-align: center;
-          font-size: 11px;
-          letter-spacing: 5px;
+        .brand-vyas {
           color: var(--darkblue);
-          margin-top: 5px;
+          text-shadow: 1px 1px 0px rgba(6, 54, 109, 0.15);
+        }
+
+        .brand-badge {
+          background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+          color: #fff;
+          padding: 3px 7px;
+          border-radius: 4px;
+          font-size: 18px;
+          font-weight: 900;
+          box-shadow: 0 2px 5px rgba(255, 8, 68, 0.3);
+        }
+
+        .brand-stationers {
+          background: linear-gradient(90deg, #ff7a18, #7746d7);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 900;
+        }
+
+        .logo-sub {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 2px;
+        }
+
+        .badge-city {
+          background: var(--yellow);
+          color: #102a43;
+          font-size: 9.5px;
+          font-weight: 900;
+          letter-spacing: 1.5px;
+          padding: 1px 6px;
+          border-radius: 3px;
+          text-transform: uppercase;
+          border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .logo-tagline {
+          font-size: 10.5px;
+          font-weight: 700;
+          letter-spacing: 0.8px;
+          color: var(--sky);
+          text-transform: uppercase;
         }
 
         nav {
           display: flex;
-          gap: 28px;
+          gap: 8px;
           align-items: center;
         }
 
-        nav a {
-          color: var(--dark);
-          font-weight: bold;
-          transition: 0.3s;
+        /* Proportionate Colorful Rectangle Buttons */
+        .nav-btn {
+          display: inline-block;
+          padding: 6px 12px;
+          border-radius: 4px;
+          font-weight: 700;
+          font-size: 12.5px;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          line-height: 1.2;
+          transition: transform 0.18s ease, box-shadow 0.18s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        nav a:hover {
-          color: var(--orange);
+        .nav-btn:hover {
+          transform: translateY(-1.5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+        }
+
+        .nav-home {
+          background: var(--blue);
+          color: #fff;
+        }
+        .nav-services {
+          background: var(--orange);
+          color: #fff;
+        }
+        .nav-stationery {
+          background: var(--purple);
+          color: #fff;
+        }
+        .nav-about {
+          background: var(--sky);
+          color: #fff;
+        }
+        .nav-contact {
+          background: var(--pink);
+          color: #fff;
         }
 
         .nav-whatsapp {
           background: var(--green);
           color: #fff;
-          padding: 11px 18px;
-          border-radius: 30px;
-          font-weight: bold;
-          box-shadow: 0 6px 15px rgba(25, 169, 87, 0.25);
+          padding: 6px 13px;
+          border-radius: 4px;
+          font-weight: 700;
+          font-size: 12.5px;
+          box-shadow: 0 2px 5px rgba(25, 169, 87, 0.3);
+          transition: transform 0.18s ease;
+        }
+
+        .nav-whatsapp:hover {
+          transform: translateY(-1.5px);
         }
 
         .menu {
           display: none;
-          font-size: 30px;
+          font-size: 28px;
           cursor: pointer;
           color: var(--blue);
           background: none;
@@ -702,6 +785,22 @@ export default function Home() {
 
         /* ================= RESPONSIVE ================= */
 
+        @media (max-width: 1050px) {
+          nav {
+            gap: 6px;
+          }
+          .nav-btn {
+            padding: 5px 9px;
+            font-size: 11.5px;
+          }
+          .logo-main {
+            font-size: 20px;
+          }
+          .brand-badge {
+            font-size: 15px;
+          }
+        }
+
         @media (max-width: 1000px) {
           .services-grid {
             grid-template-columns: repeat(2, 1fr);
@@ -737,7 +836,7 @@ export default function Home() {
           }
         }
 
-        @media (max-width: 750px) {
+        @media (max-width: 880px) {
           .menu {
             display: block;
           }
@@ -747,15 +846,23 @@ export default function Home() {
             position: absolute;
             left: 0;
             right: 0;
-            top: 78px;
+            top: 76px;
             background: white;
-            padding: 22px;
+            padding: 18px 22px;
             flex-direction: column;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            gap: 10px;
           }
 
           nav.active {
             display: flex;
+          }
+
+          .nav-btn {
+            width: 100%;
+            text-align: center;
+            padding: 10px 14px;
+            font-size: 14px;
           }
 
           .nav-whatsapp {
@@ -797,8 +904,22 @@ export default function Home() {
         }
 
         @media (max-width: 480px) {
-          .logo {
-            font-size: 20px;
+          .logo-main {
+            font-size: 18px;
+          }
+
+          .brand-badge {
+            font-size: 14px;
+            padding: 2px 5px;
+          }
+
+          .badge-city {
+            font-size: 8.5px;
+            padding: 1px 4px;
+          }
+
+          .logo-tagline {
+            font-size: 9.5px;
           }
 
           .hero-container {
@@ -839,11 +960,16 @@ export default function Home() {
       {/* ================= HEADER ================= */}
       <header>
         <div className="container navbar">
-          <a href="#home" className="logo">
-            Vyas <span>ePrint</span>
-            <br />
-            and Stationers
-            <small>JODHPUR</small>
+          <a href="#home" className="logo-container">
+            <div className="logo-main">
+              <span className="brand-vyas">Vyas</span>
+              <span className="brand-badge">ePrint</span>
+              <span className="brand-stationers">&amp; Stationers</span>
+            </div>
+            <div className="logo-sub">
+              <span className="badge-city">Jodhpur</span>
+              <span className="logo-tagline">Print • Copy • Bind</span>
+            </div>
           </a>
 
           <button className="menu" onClick={toggleMenu} aria-label="Toggle menu">
@@ -851,19 +977,19 @@ export default function Home() {
           </button>
 
           <nav id="navMenu" className={menuOpen ? 'active' : ''}>
-            <a href="#home" onClick={closeMenu}>
+            <a href="#home" className="nav-btn nav-home" onClick={closeMenu}>
               Home
             </a>
-            <a href="#services" onClick={closeMenu}>
+            <a href="#services" className="nav-btn nav-services" onClick={closeMenu}>
               Services
             </a>
-            <a href="#stationery" onClick={closeMenu}>
+            <a href="#stationery" className="nav-btn nav-stationery" onClick={closeMenu}>
               Stationery
             </a>
-            <a href="#about" onClick={closeMenu}>
+            <a href="#about" className="nav-btn nav-about" onClick={closeMenu}>
               About
             </a>
-            <a href="#contact" onClick={closeMenu}>
+            <a href="#contact" className="nav-btn nav-contact" onClick={closeMenu}>
               Contact
             </a>
           </nav>
