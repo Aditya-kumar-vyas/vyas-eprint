@@ -513,6 +513,83 @@ export default function Home() {
           color: #718096;
         }
 
+        /* ================= WHATSAPP SERVICE CTA ================= */
+        .service-card .service-whatsapp {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          margin-top: 16px;
+          padding: 9px 14px;
+          border-radius: 7px;
+          background: #25d366;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 800;
+          line-height: 1.2;
+          box-shadow: 0 3px 8px rgba(37, 211, 102, 0.22);
+          transition: 0.25s;
+        }
+        .service-card .service-whatsapp:hover {
+          background: #1fb957;
+          transform: translateY(-2px);
+        }
+
+        /* ================= HOW TO ORDER ================= */
+        .how-order {
+          background: linear-gradient(180deg, #f4fbff, #ffffff);
+        }
+        .order-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 22px;
+        }
+        .order-step {
+          background: #fff;
+          border: 1px solid #dfedf7;
+          border-radius: 18px;
+          padding: 28px 22px;
+          text-align: center;
+          box-shadow: 0 8px 25px rgba(0, 70, 130, 0.06);
+        }
+        .order-icon {
+          width: 72px;
+          height: 72px;
+          margin: 0 auto 14px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #e7faee;
+          color: #25d366;
+          font-size: 34px;
+        }
+        .order-step h3 {
+          color: var(--darkblue);
+          margin-bottom: 7px;
+          font-size: 20px;
+        }
+        .order-step p {
+          font-size: 14px;
+          margin-bottom: 14px;
+        }
+        .order-step .order-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          background: #25d366;
+          color: #fff;
+          padding: 9px 14px;
+          border-radius: 7px;
+          font-size: 13px;
+          font-weight: 800;
+        }
+
+        /* ================= MOBILE ACTION BAR ================= */
+        .mobile-action-bar {
+          display: none;
+        }
+
         /* ================= STATIONERY ================= */
 
         .stationery {
@@ -869,6 +946,47 @@ export default function Home() {
             display: none;
           }
 
+          body {
+            padding-bottom: 68px;
+          }
+
+          .mobile-action-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+          }
+          .mobile-action-bar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 12px 8px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+          }
+          .mobile-action-whatsapp {
+            background: #25d366;
+          }
+          .mobile-action-directions {
+            background: var(--blue);
+          }
+          .whatsapp-float {
+            bottom: 78px;
+          }
+          .order-grid {
+            grid-template-columns: 1fr;
+          }
+
           .hero h1 {
             font-size: 45px;
           }
@@ -900,6 +1018,53 @@ export default function Home() {
 
           section {
             padding: 65px 0;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .container {
+            width: 94%;
+          }
+          .hero {
+            min-height: auto;
+            padding: 55px 0 65px;
+          }
+          .hero h1 {
+            font-size: 38px;
+          }
+          .hero h2 {
+            font-size: 21px;
+          }
+          .hero p {
+            font-size: 16px;
+          }
+          .hero-buttons .btn {
+            width: 100%;
+            text-align: center;
+          }
+          .hero-buttons {
+            gap: 10px;
+          }
+          .service-card .service-whatsapp {
+            font-size: 12.5px;
+            padding: 9px 12px;
+          }
+          .section-title {
+            margin-bottom: 34px;
+          }
+          .section-title h2 {
+            font-size: 32px;
+          }
+          .contact-card,
+          .map-card {
+            padding: 25px 20px;
+          }
+          .address-box {
+            font-size: 15px;
+          }
+          .whatsapp-number {
+            font-size: 18px;
+            padding: 14px 20px;
           }
         }
 
@@ -986,6 +1151,9 @@ export default function Home() {
             <a href="#stationery" className="nav-btn nav-stationery" onClick={closeMenu}>
               Stationery
             </a>
+            <a href="#how-to-order" className="nav-btn nav-about" onClick={closeMenu}>
+              How to Order
+            </a>
             <a href="#about" className="nav-btn nav-about" onClick={closeMenu}>
               About
             </a>
@@ -1035,6 +1203,15 @@ export default function Home() {
               <a href="https://wa.me/917976711615" target="_blank" rel="noopener noreferrer" className="btn btn-white">
                 💬 WhatsApp: 7976711615
               </a>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=21E%2F348%2C%20CHB%2C%20Near%20Udhyan%20Apartment%2C%20Pal%20Road%2C%20Jodhpur%20342008"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-white"
+              >
+                📍 Get Directions
+              </a>
             </div>
           </div>
 
@@ -1075,6 +1252,14 @@ export default function Home() {
               </div>
               <h3>Colour Printout</h3>
               <p>Bright, sharp and professional colour printing for documents, projects, photos and more.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20Colour%20Printout."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
             </div>
 
             {/* 2 BW PRINT */}
@@ -1090,6 +1275,14 @@ export default function Home() {
               </div>
               <h3>BW Printout</h3>
               <p>Clear and economical black &amp; white printing for everyday documents and study material.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20BW%20Printout."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
             </div>
 
             {/* 3 PHOTOCOPY */}
@@ -1106,6 +1299,14 @@ export default function Home() {
               </div>
               <h3>Photocopy</h3>
               <p>Fast and reliable photocopying for documents, forms, notes and study material.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20Photocopy."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
             </div>
 
             {/* 4 PASSPORT PHOTO */}
@@ -1120,6 +1321,14 @@ export default function Home() {
               </div>
               <h3>Passport Photo</h3>
               <p>Passport-size photographs for applications, forms, IDs and official documents.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20Passport%20Photo."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
             </div>
 
             {/* 5 LAMINATION */}
@@ -1135,6 +1344,14 @@ export default function Home() {
               </div>
               <h3>Lamination</h3>
               <p>Protect certificates, documents, photographs, cards and important papers.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20Lamination."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
             </div>
 
             {/* 6 SPIRAL BINDING */}
@@ -1151,6 +1368,14 @@ export default function Home() {
               </div>
               <h3>Spiral Binding</h3>
               <p>Neat and durable binding for projects, reports, assignments, books and documents.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20Spiral%20Binding."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
             </div>
 
             {/* 7 STATIONERY */}
@@ -1170,6 +1395,72 @@ export default function Home() {
               </div>
               <h3>All Kind of Stationery</h3>
               <p>Pens, pencils, notebooks, files, folders, art supplies, office supplies and much more.</p>
+              <a
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20need%20information%20about%20Stationery."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-whatsapp"
+              >
+                💬 Ask on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= HOW TO ORDER ON WHATSAPP ================= */}
+      <section className="how-order" id="how-to-order">
+        <div className="container">
+          <div className="section-title">
+            <span>Simple WhatsApp Ordering</span>
+            <h2>How to Order on WhatsApp</h2>
+            <p>
+              Send your file and requirement on WhatsApp. We will confirm the details and you can collect your
+              completed work from the shop.
+            </p>
+          </div>
+
+          <div className="order-grid">
+            <div className="order-step">
+              <div className="order-icon">📄</div>
+              <h3>1. Send Your File</h3>
+              <p>Send your PDF, image or document on WhatsApp.</p>
+              <a
+                className="order-link"
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20want%20to%20send%20a%20file%20for%20printing."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                💬 Send on WhatsApp
+              </a>
+            </div>
+
+            <div className="order-step">
+              <div className="order-icon">💬</div>
+              <h3>2. Confirm Requirement</h3>
+              <p>Tell us colour/BW, copies, size, binding or any other requirement.</p>
+              <a
+                className="order-link"
+                href="https://wa.me/917976711615?text=Hello%20Vyas%20ePrint%2C%20I%20want%20to%20confirm%20my%20printing%20requirement."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                💬 Confirm on WhatsApp
+              </a>
+            </div>
+
+            <div className="order-step">
+              <div className="order-icon">🏪</div>
+              <h3>3. Collect from Shop</h3>
+              <p>We will confirm when your work is ready. Visit the shop to collect it.</p>
+              <a
+                className="order-link"
+                href="https://www.google.com/maps/search/?api=1&query=21E%2F348%2C%20CHB%2C%20Near%20Udhyan%20Apartment%2C%20Pal%20Road%2C%20Jodhpur%20342008"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📍 Get Directions
+              </a>
             </div>
           </div>
         </div>
@@ -1411,6 +1702,21 @@ export default function Home() {
 
         <div className="container footer-bottom">© 2026 Vyas ePrint and Stationers, Jodhpur. All Rights Reserved.</div>
       </footer>
+
+      {/* ================= MOBILE WHATSAPP + DIRECTIONS BAR ================= */}
+      <div className="mobile-action-bar" aria-label="Quick actions">
+        <a href="https://wa.me/917976711615" target="_blank" rel="noopener noreferrer" className="mobile-action-whatsapp">
+          💬 WhatsApp
+        </a>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=21E%2F348%2C%20CHB%2C%20Near%20Udhyan%20Apartment%2C%20Pal%20Road%2C%20Jodhpur%20342008"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-action-directions"
+        >
+          📍 Directions
+        </a>
+      </div>
 
       {/* ================= FLOATING WHATSAPP ================= */}
       <a
